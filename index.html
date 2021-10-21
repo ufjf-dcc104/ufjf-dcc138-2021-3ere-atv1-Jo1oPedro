@@ -17,6 +17,7 @@
         canvas.width = 480;
         canvas.height = 320;
         let x = 150;
+        let initial = 150;
         let t0;
         let dt;
         requestAnimationFrame(desenha);
@@ -29,6 +30,15 @@
             dt = (t - t0)/1000;
             ctx.fillStyle = "black";
             ctx.fillRect(0,0, canvas.width, canvas.height);
+
+            //Atualiza estado
+            if(x < canvas.width) {
+                x = x + 10*dt;
+            }
+            else {
+                x = initial;
+            }
+
             //Desenha Elementos//
             ctx.fillStyle = "white";
             ctx.fillRect(x,150, 20, 20);
