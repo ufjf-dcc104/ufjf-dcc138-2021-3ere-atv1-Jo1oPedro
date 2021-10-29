@@ -35,9 +35,10 @@
 
             //Atualiza estados
             if(x < canvas.width) {
-                x = x + 10*dt;
+                /*x = x + 10*dt;*/
                 a = a + 2*Math.PI*dt;
                 y = 100 + 100*Math.cos(a);
+                x = 100 + 100*Math.sin(a);
             }
             else {
                 x = initial;
